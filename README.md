@@ -6,7 +6,7 @@ A set of command-line statistics tools.
 ```
  - bash ./start-stats-generator-docker-container.sh Build-Images-Teardown-Old-Docker-Containers
  - bash ./start-stats-generator-docker-container.sh Generate-All-Stats
- - bash ./start-stats-generator-docker-container.sh Generate-Using-Specific-Utiliy std
+ - bash ./start-stats-generator-docker-container.sh Generate-Using-Specific-Utiliy max
 ```
 
 ## Installation
