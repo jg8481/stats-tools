@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+
+  docker-test-runner:
+    build:
+      context: .
+      dockerfile: "Dockerfile.Stats-generator"
+    volumes:
+      - "./test:/test"
+    command: -inMemory
+    #network_mode: "bridge"

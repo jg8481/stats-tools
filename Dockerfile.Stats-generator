@@ -1,0 +1,28 @@
+FROM amd64/ubuntu:latest
+MAINTAINER Joshua Gorospe <joshua.gorospe@gmail.com>
+
+# No interactive frontend during docker build
+ENV DEBIAN_FRONTEND=noninteractive \
+    DEBCONF_NONINTERACTIVE_SEEN=true
+
+WORKDIR "/test"
+
+USER root
+
+RUN apt-get update \
+ && apt-get -y upgrade \
+ && apt-get clean -y \
+ && apt-get update --fix-missing -y 
+
+RUN apt-get install -y \
+  zip \
+  wget \
+  curl 
+
+RUN wget https://github.com/jweslley/stats-tools/releases/download/v0.0.1/stats-tools-linux-amd64-0.0.1.zip \
+  && unzip stats-tools-linux-amd64-0.0.1.zip 
+  #\
+  #&& chmod +x -R ./stats-tools-linux-amd64-0.0.1
+
+ADD commands-running-inside-a-docker-container.sh /usr/local/bin/commands-running-inside-a-docker-container.sh
+RUN chmod +x /usr/local/bin/commands-running-inside-a-docker-container.sh
