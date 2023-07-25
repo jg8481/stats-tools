@@ -2,7 +2,8 @@
 
 A set of command-line statistics tools.
 
-**Note From [Josh](https://github.com/jg8481):** This is a work-in-progress fork of jweslley's original [stats-tools](https://github.com/jweslley/stats-tools), modified to run inside a Docker container. First install Docker Desktop and make sure you have the latest version of `docker-compose`. After both are installed you can then use the `start-generator-docker-container.sh` Bash script to build and use the following commands to run the `stats-tools` from inside a Docker container.
+**Note From [Josh](https://github.com/jg8481):** 
+This is a work-in-progress fork of jweslley's original [stats-tools](https://github.com/jweslley/stats-tools), modified to run inside a Docker container. First install Docker Desktop and make sure you have the latest version of `docker-compose`. After both are installed you can then use the `start-generator-docker-container.sh` Bash script to build and use the following commands to run the `stats-tools` from inside a Docker container.
 ```
  - bash ./start-stats-generator-docker-container.sh Build-Images-Teardown-Old-Docker-Containers
  - bash ./start-stats-generator-docker-container.sh Generate-All-Stats
